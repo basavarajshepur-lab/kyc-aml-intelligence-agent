@@ -1,0 +1,130 @@
+[
+  {
+    "case_id": "KYC_001",
+    "entity_name": "James Thornton",
+    "entity_type": "individual",
+    "country": "GB",
+    "stated_purpose": "Business current account for Greenfield Advisory Partners LLP, a UK-registered solicitors' practice specialising in commercial property law.",
+    "additional_context": {
+      "occupation": "Solicitor",
+      "employer": "Greenfield Advisory Partners LLP",
+      "company_registration": "OC421892"
+    },
+    "expected_outcome": "APPROVE — clean UK professional, transparent company structure"
+  },
+  {
+    "case_id": "KYC_002",
+    "entity_name": "Viktor Petrov",
+    "entity_type": "individual",
+    "country": "RU",
+    "stated_purpose": "Personal savings account. Customer states he is a retired businessman now living in Cyprus.",
+    "additional_context": {
+      "nationality": "Russian",
+      "claimed_residence": "Cyprus",
+      "source_of_funds": "Proceeds from sale of Moscow property"
+    },
+    "expected_outcome": "REJECT — direct OFAC SDN sanctions match"
+  },
+  {
+    "case_id": "KYC_003",
+    "entity_name": "Ahmed Al-Rashidi",
+    "entity_type": "individual",
+    "country": "NG",
+    "stated_purpose": "Investment account. Customer states he is a former government minister seeking to invest personal savings of approximately £2.5M in UK equities.",
+    "additional_context": {
+      "nationality": "Nigerian",
+      "former_role": "Finance minister",
+      "source_of_wealth": "Accumulated salary and private business interests"
+    },
+    "expected_outcome": "ENHANCED_DUE_DILIGENCE — PEP tier 2, high-risk jurisdiction, large amount"
+  },
+  {
+    "case_id": "KYC_004",
+    "entity_name": "Margaret Collins",
+    "entity_type": "individual",
+    "country": "GB",
+    "stated_purpose": "Personal current account. Customer is a retired teacher.",
+    "additional_context": {
+      "occupation": "Retired teacher",
+      "previous_role": "Local councillor"
+    },
+    "expected_outcome": "APPROVE — low-risk PEP (tier 3, retired, domestic UK role)"
+  },
+  {
+    "case_id": "KYC_005",
+    "entity_name": "Sunrise Holdings Ltd",
+    "entity_type": "company",
+    "country": "BVI",
+    "stated_purpose": "Corporate account to receive investment returns and distribute to shareholders.",
+    "additional_context": {
+      "incorporation_country": "British Virgin Islands",
+      "director_names": ["Chen Wei"],
+      "stated_business": "Investment holding company"
+    },
+    "expected_outcome": "ESCALATE — BVI jurisdiction, opaque ownership, fuzzy sanctions match on company name"
+  },
+  {
+    "case_id": "KYC_006",
+    "entity_name": "FastTrack Finance Ltd",
+    "entity_type": "company",
+    "country": "GB",
+    "stated_purpose": "Business account for financial advisory services company.",
+    "additional_context": {
+      "incorporation_country": "England & Wales",
+      "companies_house_number": "12847391",
+      "stated_business": "Financial advisory and structured products"
+    },
+    "expected_outcome": "ESCALATE — FCA investigation, director with multiple insolvencies"
+  },
+  {
+    "case_id": "KYC_007",
+    "entity_name": "Wei Zhang",
+    "entity_type": "individual",
+    "country": "GB",
+    "stated_purpose": "Business account for a small e-commerce business selling electronics.",
+    "additional_context": {
+      "nationality": "British Chinese",
+      "occupation": "E-commerce business owner",
+      "turnover": "Approximately £180,000 per year"
+    },
+    "expected_outcome": "APPROVE (after HITL) — common name, no material hits, but requires analyst to clear name collision"
+  },
+  {
+    "case_id": "KYC_008",
+    "entity_name": "Atlas Trading International",
+    "entity_type": "company",
+    "country": "AE",
+    "stated_purpose": "Corporate account for commodity trading operations across the Middle East and Central Asia.",
+    "additional_context": {
+      "incorporation_country": "UAE (DIFC)",
+      "director_names": ["Mikhail Voronov", "Alexei Karpov"],
+      "stated_business": "Commodity trading — metals and energy"
+    },
+    "expected_outcome": "REJECT/ESCALATE — direct HMT sanctions match, adverse media, Russian-named directors, UAE greylist"
+  },
+  {
+    "case_id": "KYC_009",
+    "entity_name": "Caspian Energy Partners",
+    "entity_type": "company",
+    "country": "AZ",
+    "stated_purpose": "Corporate account for an Azerbaijani energy consultancy providing technical services to oil and gas operators in the Caspian region.",
+    "additional_context": {
+      "incorporation_country": "Azerbaijan",
+      "stated_business": "Energy sector consultancy",
+      "clients": "State oil company of Azerbaijan, international operators"
+    },
+    "expected_outcome": "ENHANCED_DUE_DILIGENCE — legitimate business but Caspian region adjacency to sanctioned territories requires EDD"
+  },
+  {
+    "case_id": "KYC_010",
+    "entity_name": "Sarah Bennett",
+    "entity_type": "individual",
+    "country": "GB",
+    "stated_purpose": "Personal current account.",
+    "additional_context": {
+      "occupation": "NHS nurse",
+      "employer": "Royal London Hospital"
+    },
+    "expected_outcome": "APPROVE — clean UK individual, low risk profile, straightforward use case"
+  }
+]
