@@ -1,6 +1,6 @@
 # PM Guide: AI in KYC — Where It Adds Value and Where Humans Must Stay
 
-*By Basavaraj Shepur — drawing on LSEG Worldcheck/VEDaaS integration and JPMorgan KYC work*
+*By Basavaraj Shepur — Senior AI Product Manager with 19 years in financial services*
 
 ---
 

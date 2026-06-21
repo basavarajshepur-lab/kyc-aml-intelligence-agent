@@ -12,7 +12,7 @@ KYC onboarding at a tier-1 bank costs £30–50M per year. Corporate client onbo
 
 The judgment call — is this entity a material risk? — takes 5 minutes. The data collection takes 45.
 
-At LSEG, Worldcheck aggregated this data into a single screening API used by 40,000+ financial institutions. At JPMorgan, KYC operations ran thousands of entity checks daily. The enrichment is a solved data problem. The risk assessment still requires human judgment — but it doesn't require humans to do the data work first.
+Worldcheck aggregates this data into a single screening API used by 40,000+ financial institutions. KYC operations at major banks run thousands of entity checks daily. The enrichment is a solved data problem. The risk assessment still requires human judgment — but it doesn't require humans to do the data work first.
 
 ---
 
@@ -171,7 +171,7 @@ See `docs/pm-guide-ai-in-kyc.md` for the full "where AI adds value vs. where hum
 
 ## Background
 
-Built by [Basavaraj Shepur](https://linkedin.com/in/basavarajshepur) — Senior AI Product Manager with 19 years in financial services. Former Senior Product Owner at LSEG/Refinitiv, where responsibilities included the Worldcheck AML screening data product and VEDaaS entity verification platform — used by 40,000+ financial institutions globally for KYC/AML screening. Former Associate at JPMorgan Asset Management, where KYC and compliance operations were core to client onboarding. This system implements the enrichment patterns from Worldcheck (multi-list screening, fuzzy matching, PEP tiers) and the responsible AI controls from Deutsche Bank CDO (confidence thresholds, HITL gates, audit chains).
+Built by [Basavaraj Shepur](https://linkedin.com/in/basavarajshepur) — Senior AI Product Manager with 19 years in financial services. This system implements KYC enrichment patterns (multi-list screening, fuzzy matching, PEP tiers) and responsible AI controls (confidence thresholds, HITL gates, audit chains) drawn from production financial services deployments.
 
 ---
 
