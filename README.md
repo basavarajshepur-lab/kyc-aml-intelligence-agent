@@ -8,9 +8,9 @@
 
 ## The Problem
 
-KYC onboarding at a tier-1 bank costs £30–50M per year. Corporate client onboarding takes 30–120 days. 80% of the work is manual data aggregation — an analyst checking 6–8 systems for each entity: OFAC, UN sanctions, HMT, EU sanctions, PEP databases, adverse media, Companies House, and FATF country risk.
+KYC onboarding at a tier-1 bank costs £30–50M per year. Corporate client onboarding takes 30–120 days. 80% of the work is manual data aggregation  an analyst checking 6–8 systems for each entity: OFAC, UN sanctions, HMT, EU sanctions, PEP databases, adverse media, Companies House, and FATF country risk.
 
-The judgment call — is this entity a material risk? — takes 5 minutes. The data collection takes 45.
+The judgment call  is this entity a material risk? — takes 5 minutes. The data collection takes 45.
 
 Worldcheck aggregates this data into a single screening API used by 40,000+ financial institutions. KYC operations at major banks run thousands of entity checks daily. The enrichment is a solved data problem. The risk assessment still requires human judgment — but it doesn't require humans to do the data work first.
 
