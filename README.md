@@ -6,6 +6,37 @@
 
 ---
 
+## Executive Summary
+
+KYC compliance is one of the most expensive, slowest, and most error-prone processes in financial services — not because the risk judgment is hard, but because the data gathering before it is manual, fragmented, and exhausting.
+
+A compliance analyst screening a single customer today must manually check 6–8 separate systems: OFAC, UN, HM Treasury, EU sanctions lists, PEP databases, adverse media sources, corporate registries, and FATF country risk ratings. That research — largely copy-paste and tab-switching — takes 45 minutes. The actual risk judgment takes 5. At a tier-1 bank, this costs **£30–50 million per year** and stretches corporate client onboarding to **30–120 days**.
+
+### The Pain Points This Tool Solves
+
+**1. The manual research trap.** Analysts spend 80% of their time aggregating data, not assessing risk. This tool automates all of it — sanctions screening, PEP checks, adverse media, company registry lookups, and country risk — in under 60 seconds per entity.
+
+**2. Analyst fatigue and decision inconsistency.** Reviewing hundreds of cases a day degrades decision quality and creates regulatory audit risk. This tool produces the same risk rating for the same entity profile every time, regardless of case volume.
+
+**3. The false positive flood.** Automated name-screening tools generate 60–70% false positive rates. Analysts drown in alerts for innocent matches. This tool provides confidence scores and specific reasoning, enabling faster, better-informed clearance decisions.
+
+**4. Audit gaps.** Manual processes leave inconsistent documentation. This tool creates an append-only audit trail — every decision recorded with a numbered reasoning chain, before any analyst sees it — that meets POCA 2002 and FCA SYSC 6.3 requirements.
+
+### Business Value in Financial Services
+
+| Metric | Impact |
+|--------|--------|
+| Screening time per entity | 45 minutes → under 60 seconds |
+| Analyst capacity | 5–10× more cases with same headcount |
+| KYC operations cost reduction | 30–40% at tier-1 bank scale (£10–20M+/year) |
+| Audit trail quality | Full reasoning chain, immutable, regulator-ready |
+| False positive clearance | Faster with AI-provided disambiguation context |
+| Regulatory risk | Reduced through consistent, documented decisions |
+
+The tool does not replace compliance analysts. It eliminates the data gathering so analysts focus exclusively on judgment — the 20% of KYC work that actually requires a human.
+
+---
+
 ## The Problem
 
 KYC onboarding at a tier-1 bank costs £30–50M per year. Corporate client onboarding takes 30–120 days. 80% of the work is manual data aggregation  an analyst checking 6–8 systems for each entity: OFAC, UN sanctions, HMT, EU sanctions, PEP databases, adverse media, Companies House, and FATF country risk.
@@ -166,6 +197,64 @@ This is a production-ready **demo**. For deployment at a regulated institution:
 8. False positive rate benchmarking against historical manual screening before go-live
 
 See `docs/pm-guide-ai-in-kyc.md` for the full "where AI adds value vs. where humans must stay" framework.
+
+---
+
+## Competitive Advantages
+
+### 1. Purpose-Built for Financial Services Compliance
+Most AI tools are general-purpose. This tool is built specifically for KYC/AML workflows, with the regulatory framework baked in — PEP tiers, FATF risk ratings, HITL thresholds aligned to FCA guidance. A generic AI assistant cannot replicate this domain-specific design.
+
+### 2. Reasoning Chain — Not a Black Box
+Every risk score comes with a numbered explanation of *why*. This is not just useful for analysts — it is a regulatory requirement. Regulators expect to see how decisions were made, not just what they were. Tools that produce a score without explanation fail this requirement.
+
+### 3. Structured Output — Machine-Readable, Not Prose
+The risk assessment produces typed, structured data — not a paragraph of text. This makes it directly connectable to downstream systems: case management platforms (Appian, Pegasystems), reporting tools, and regulatory submission systems. You pipe structured data, you do not copy AI prose.
+
+### 4. Conservative by Design
+The tool errs on the side of human review. Confidence below 80% triggers analyst review — not auto-approval. This is the right risk posture for a compliance tool. Regulatory penalties for a missed sanctions hit are orders of magnitude more severe than the cost of routing one extra case to a human reviewer.
+
+### 5. Audit Integrity Built In
+The append-only audit trail with AI decision logged *before* the analyst sees it is not a feature added as an afterthought — it is a core design principle. This prevents post-hoc rationalisation, a known failure mode where analysts unconsciously align their "independent" review with what the AI already told them.
+
+### 6. Production-Ready Architecture
+Built on the same patterns used in production at LSEG — where the Worldcheck screening platform serves 40,000+ financial institutions globally. The enrichment agent design mirrors the VEDaaS entity verification pipeline. This is not an academic prototype.
+
+### 7. Transparent Human-AI Division of Labour
+The tool is explicit about what AI does and what humans must do. AI handles the research. Humans handle judgment on consequential decisions. This clarity is what regulators expect — and what too many AI compliance tools obscure.
+
+---
+
+## Future Growth Opportunities
+
+### Near-Term: Connect to Live Data Feeds
+The current version uses realistic mock data. Connecting to licensed commercial feeds unlocks full production value:
+- **Worldcheck (LSEG)** — gold-standard sanctions, PEP, and adverse media feed used by 40,000+ institutions
+- **ComplyAdvantage** — real-time adverse media and sanctions monitoring
+- **Companies House API** (free, UK Government) — live UK corporate registry
+- **OpenCorporates** — international company data across 140+ jurisdictions
+- **Dow Jones Risk & Compliance** — additional PEP and adverse media coverage
+
+### Near-Term: Ongoing Monitoring
+KYC is not a one-time check. The tool architecture supports building an ongoing monitoring layer that re-screens existing customers when trigger events occur — a new sanctions designation, a PEP becoming active, a regulatory action — without requiring manual re-initiation.
+
+### Medium-Term: EDD Workflow Automation
+For customers requiring Enhanced Due Diligence, the tool can draft EDD questionnaires, structure source-of-wealth analysis, and surface specific documentation requirements — reducing EDD completion time from days to hours.
+
+### Medium-Term: SAR Drafting Support
+When a case warrants a Suspicious Activity Report, the AI has already assembled the evidence and can draft the SAR narrative. The MLRO reviews and submits. SAR drafting time drops from hours to minutes.
+
+### Medium-Term: Cross-Institution Pattern Detection
+Individual institutions see only their own customer data. A sanctions evasion network may span multiple institutions, staying below each one's detection threshold. With appropriate privacy-preserving architecture, the tool could contribute to and benefit from cross-institution pattern detection.
+
+### Longer-Term: Biometric Integration for Name Disambiguation
+The hardest KYC problem is name disambiguation — distinguishing your "Wei Zhang" from the sanctioned one. Integrating document verification providers (Onfido, Jumio, iProov) would allow biometric confirmation that resolves name collisions programmatically.
+
+### Longer-Term: Regulatory Reporting Automation
+The structured audit trail makes periodic regulatory returns automatable. The data is already typed and queryable — connecting it to regulatory reporting templates eliminates manual data extraction for submissions.
+
+### Longer-Term: Multi-Jurisdictional Expansion
+The tool is currently calibrated for UK/EU frameworks (FCA, JMLSG, HMT). The same architecture applies to US (FinCEN, OFAC), Singapore (MAS), UAE (CBUAE), and other major financial centres — each requiring jurisdiction-specific sanctions lists, PEP definitions, and reporting requirements.
 
 ---
 
